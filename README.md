@@ -49,6 +49,6 @@ To use this code for tweet sentiment classification:
 
 Note: The code assumes the availability of pre-defined word lists for feature extraction. You may need to adjust the code or provide your own word lists depending on your specific requirements.
 
-This README provides an overview of the code's functionality and usage. For more detailed information, refer to the code comments and variable names.
+This README provides an overview of the code's functionality and usage. For more detailed and current information, refer to the `Tweet_Classification.py` code, comments and variable names.
 
 Happy sentiment classification!
