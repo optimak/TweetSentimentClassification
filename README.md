@@ -1,6 +1,7 @@
 # 🌟 NLP Project Summary: Understanding Tweet Sentiment 🌟
 
-🏆 This project totally crushed the competition when it came to classification accuracy! 
+🏆 This project totally crushed the competition when it came to classification accuracy, with F1_score of <span style="color:blue">This text is blue!</span>
+ 86.47 %! 
 
 In this project, I sift through tweets and figure out if they’re spreading good vibes or bad - unlocking the conversation happening online and tapping into the emotions behind those bite-sized 280-character tweets! 💬✨
 
