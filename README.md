@@ -1,54 +1,80 @@
-# NLP-Project Summary
-Uses Tweet Data to classify as positive or negative
+# 🌟 NLP Project Summary: Understanding Tweet Sentiment 🌟
 
-# Tweet Sentiment Classification
+Hey there! Today, I want to share a project that dives into the world of natural language processing (NLP). We’re going to look at how to analyze tweets and determine whether they express positive or negative feelings. It’s all about making sense of the conversations happening online.
 
-In this NLP project, I perform tweet sentiment classification using logistic regression. The code takes a dataset of tweets and their corresponding sentiment labels and performs various preprocessing steps, feature extraction, and training of a logistic regression model.
+## 📝 Tweet Sentiment Classification
 
-## Preprocessing
+In this project, I use logistic regression to classify tweets based on their sentiment. It’s not just about crunching numbers; it’s about tapping into what people are feeling and sharing their thoughts with the world.
 
-1. The code starts by importing the necessary libraries and setting up the file paths for the dataset.
-2. The tweet text is read from the file `train_text.txt`, and the corresponding labels are read from `train_labels.txt`.
-3. Preprocessing steps are applied to the tweet text:
-   - Removing `@user` mentions and characters before that.
-   - Tokenizing the tweets into individual words.
-   - Removing stop words from the tweets.
-4. Empty tweets and tweets with zero characters are removed from the dataset.
+### 🚀 Preprocessing
 
-## Feature Extraction
+Before we can analyze the tweets, we need to get them ready. Here’s how we do that:
 
-1. Three initial features (f10, f11, f12) are computed:
-   - f10: Log count of words in each tweet.
-   - f11: Log of the length of the longest word in each tweet.
-   - f12: Log count of words with 5 or more characters in each tweet.
-2. Two feature sets (f1, f2) are created by matching words from the tweets with pre-defined word lists:
-   - f1: Scores from an adjective word list (`adj_2000.tsv`).
-   - f2: Scores from a general word list (`f_words_2000.tsv`).
-3. Seven additional feature sets (f3-f9) are created by matching words from the tweets with pre-defined word lists specific to each feature set.
-4. All the feature sets are combined into a single feature matrix (Xtrain).
+1. **Importing Libraries**: First, we bring in the libraries that we’ll need for the analysis.
 
-## Logistic Regression
+2. **Reading the Data**:
+   - We pull in the tweet text from `train_text.txt`.
+   - We match it with the sentiment labels from `train_labels.txt`.
 
-1. The labels (sentiment values) are reshaped into a row vector (Ytrain).
-2. The logistic regression model is trained using batch gradient descent.
-3. The weights (W) of the logistic regression model are updated iteratively using the training data and learning rate (l_rate) for a specified number of iterations (iters).
-4. The sigmoid function is used to map the linear combination of features and weights to a probability score between 0 and 1.
-5. The cost function (log loss) is minimized to optimize the model's predictions.
-6. The trained logistic regression model is saved, along with the learned weights.
+3. **Cleaning Up**:
+   - We remove @user mentions and other distractions, so we can focus on the content of the tweets.
+   - We break down the tweets into individual words, or tokens, to make them easier to analyze.
+   - We filter out common stop words that don’t add much meaning.
+   - Lastly, we get rid of any empty tweets, ensuring that every piece of data we analyze is useful.
 
-## Usage
+### 🔍 Feature Extraction
 
-To use this code for tweet sentiment classification:
+Now that our tweets are clean, it’s time to extract features that help us understand their sentiment better:
 
-1. Prepare the dataset:
-   - Create `train_text.txt` file containing the tweet text.
-   - Create `train_labels.txt` file containing the corresponding sentiment labels.
-2. Modify the file paths in the code to match the locations of your dataset.
-3. Run the code to perform preprocessing, feature extraction, and training.
-4. The trained model and learned weights will be saved, which can be used for sentiment classification on new tweets.
+1. **Initial Features**:
+   - **f10**: We calculate the log count of words in each tweet.
+   - **f11**: We measure the log of the length of the longest word in each tweet.
+   - **f12**: We count the number of words with five or more characters—because sometimes, the longer words hold deeper meaning.
 
-Note: The code assumes the availability of pre-defined word lists for feature extraction. You may need to adjust the code or provide your own word lists depending on your specific requirements.
+2. **Creating Feature Sets**:
+   - **f1**: Scores from an adjective word list to capture emotional tone.
+   - **f2**: Scores from a general word list for a broader context.
+   - **f3 to f9**: We create several additional feature sets from specific word lists that further enrich our analysis.
 
-This README provides an overview of the code's functionality and usage. For more detailed and current information, refer to the `Tweet_Classification.py` code, comments and variable names.
+3. **Combining Features**:
+   - All of these features come together in a single feature matrix we call **Xtrain**.
 
-Happy sentiment classification!
+### 📈 Logistic Regression
+
+With our features ready, it’s time to train our model. Here’s the step-by-step:
+
+1. **Reshaping Labels**: We convert our sentiment labels into a format the model can work with, known as **Ytrain**.
+
+2. **Training the Model**:
+   - We use batch gradient descent to train our logistic regression model, improving it iteratively to get better predictions.
+   - We update our model’s weights using the training data and a learning rate.
+
+3. **Mapping and Optimizing**:
+   - We use the sigmoid function to translate our features into probabilities between 0 and 1.
+   - By minimizing the cost function, we optimize our model for more accurate predictions.
+
+4. **Saving Our Progress**: 
+   - Once we’ve trained the model, we save it along with the learned weights, so we can use them later.
+
+### 📚 Usage
+
+Want to try this out yourself? Here’s what you need to do:
+
+1. **Prepare Your Dataset**:
+   - Create a `train_text.txt` file with the tweet text.
+   - Create a `train_labels.txt` file with the corresponding sentiment labels.
+
+2. **Modify File Paths**:
+   - Update the file paths in the code to match where your files are saved.
+
+3. **Run the Code**:
+   - Execute the code to carry out the preprocessing, feature extraction, and training.
+
+4. **Start Classifying**:
+   - With your trained model ready, you can classify new tweets and discover the sentiments behind them.
+
+---
+
+This README gives you an overview of the code and its capabilities. For a deeper dive, check out the [Tweet_Classification.py](#) code, where you’ll find more details in the comments and variable names.
+
+Let’s make sense of the conversations happening in the world—one tweet at a time. Happy coding! ✨
