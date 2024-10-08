@@ -1,6 +1,9 @@
 # 🌟 NLP Project Summary: Understanding Tweet Sentiment 🌟
 
-Hey there! Today, I want to share a project that dives into the world of natural language processing (NLP). We’re going to look at how to analyze tweets and determine whether they express positive or negative feelings. It’s all about making sense of the conversations happening online.
+🏆 This project totally crushed the competition when it came to classification accuracy! 
+
+In this project, I sift through tweets and figure out if they’re spreading good vibes or bad - unlocking the conversation happening online and tapping into the emotions behind those bite-sized 280-character tweets! 💬✨
+
 
 ## 📝 Tweet Sentiment Classification
 
@@ -75,6 +78,6 @@ Want to try this out yourself? Here’s what you need to do:
 
 ---
 
-This README gives you an overview of the code and its capabilities. For a deeper dive, check out the [Tweet_Classification.py](#) code, where you’ll find more details in the comments and variable names.
+This README gives you an overview of the code and its capabilities. For a deeper dive, check out the [Tweet_Classification.py](https://github.com/optimak/NLP-Project/blob/main/Tweet_Sentiment_Classification.ipynb) code, where you’ll find more details in the comments and variable names.
 
 Let’s make sense of the conversations happening in the world—one tweet at a time. Happy coding! ✨
