@@ -79,5 +79,3 @@ Want to try this out yourself? Here’s what you need to do:
 ---
 
 This README gives you an overview of the code and its capabilities. For a deeper dive, check out the [Tweet_Classification.py](https://github.com/optimak/NLP-Project/blob/main/Tweet_Sentiment_Classification.ipynb) code, where you’ll find more details in the comments and variable names.
-
-Let’s make sense of the conversations happening in the world—one tweet at a time. Happy coding! ✨
