@@ -1,63 +1,63 @@
 # 🌟 NLP Project Summary: Understanding Tweet Sentiment 🌟
 
-🏆 This project totally crushed the competition when it came to classification accuracy, with F1_score of **86.47 %**! 
+🏆 This project crushed the competition when it came to classification accuracy, with F1 score of **86.47 %**! 
 
-In this project, I sift through tweets and figure out if they’re spreading good vibes or bad - unlocking the conversation happening online and tapping into the emotions behind those bite-sized 280-character tweets! 💬✨
+In this project, I sift through tweets and figure out if they’re giving good or bad vibes! 💬✨
 
 
 ## 📝 Tweet Sentiment Classification
 
-In this project, I use logistic regression to classify tweets based on their sentiment. It’s not just about crunching numbers; it’s about tapping into what people are feeling and sharing their thoughts with the world.
+Logistic regression was utilized to classify tweets based on their sentiment.
 
 ### 🚀 Preprocessing
 
-Before we can analyze the tweets, we need to get them ready. Here’s how we do that:
+Before analyzing the tweets, they had to undergo some wrangling.  
 
-1. **Importing Libraries**: First, we bring in the libraries that we’ll need for the analysis.
+1. **Importing Libraries**: First, the libraries needed for the analysis were brought in.
 
 2. **Reading the Data**:
-   - We pull in the tweet text from `train_text.txt`.
-   - We match it with the sentiment labels from `train_labels.txt`.
+   - Tweets were pulled from `train_text.txt`.
+   - The tweets were matched with their sentiment labels from `train_labels.txt`.
 
 3. **Cleaning Up**:
-   - We remove @user mentions and other distractions, so we can focus on the content of the tweets.
-   - We break down the tweets into individual words, or tokens, to make them easier to analyze.
-   - We filter out common stop words that don’t add much meaning.
-   - Lastly, we get rid of any empty tweets, ensuring that every piece of data we analyze is useful.
+   - @user mentions and other distractions were removed, to focus on the content of the tweets.
+   - the tweets were broken down into individual words, or tokens, to make them easier to analyze.
+   - common stop words were filtered out.
+   - empty tweets were filtered out, ensuring that every piece of data analyzed is useful.
 
 ### 🔍 Feature Extraction
 
-Now that our tweets are clean, it’s time to extract features that help us understand their sentiment better:
+With the transformed data, features related to positive and negative sentiments can now be extracted:
 
 1. **Initial Features**:
-   - **f10**: We calculate the log count of words in each tweet.
-   - **f11**: We measure the log of the length of the longest word in each tweet.
-   - **f12**: We count the number of words with five or more characters—because sometimes, the longer words hold deeper meaning.
+   - **f10**: calculates the log count of words in each tweet.
+   - **f11**: measures the log of the length of the longest word in each tweet.
+   - **f12**: counts the number of words with five or more characters—because sometimes, the longer words hold deeper meaning.
 
 2. **Creating Feature Sets**:
-   - **f1**: Scores from an adjective word list to capture emotional tone.
-   - **f2**: Scores from a general word list for a broader context.
-   - **f3 to f9**: We create several additional feature sets from specific word lists that further enrich our analysis.
+   - **f1**: scores from an adjective word list to capture emotional tones.
+   - **f2**: scores from a general word list for a broader context.
+   - **f3 to f9**: create several additional feature sets from specific word lists that further enrich the analysis.
 
 3. **Combining Features**:
-   - All of these features come together in a single feature matrix we call **Xtrain**.
+   - All of these features come together in a single feature matrix named **Xtrain**.
 
 ### 📈 Logistic Regression
 
-With our features ready, it’s time to train our model. Here’s the step-by-step:
+With the features ready, the model can be trained. Here’s the step-by-step:
 
-1. **Reshaping Labels**: We convert our sentiment labels into a format the model can work with, known as **Ytrain**.
+1. **Reshaping Labels**: sentiment labels are converted into a format the model can work with, known as **Ytrain**.
 
 2. **Training the Model**:
-   - We use batch gradient descent to train our logistic regression model, improving it iteratively to get better predictions.
-   - We update our model’s weights using the training data and a learning rate.
+   - batch gradient descent is used to train the logistic regression model, improving it iteratively to get better predictions.
+   - the model’s weights are updated using the training data and a learning rate.
 
 3. **Mapping and Optimizing**:
-   - We use the sigmoid function to translate our features into probabilities between 0 and 1.
-   - By minimizing the cost function, we optimize our model for more accurate predictions.
+   - the sigmoid function is used to translate features into probabilities between 0 and 1.
+   - By minimizing the cost function, the model is optimized for more accurate predictions.
 
 4. **Saving Our Progress**: 
-   - Once we’ve trained the model, we save it along with the learned weights, so we can use them later.
+   - Once trained, the model is saved, along with the learned weights, for future use.
 
 ### 📚 Usage
 
@@ -78,4 +78,5 @@ Want to try this out yourself? Here’s what you need to do:
 
 ---
 
-This README gives you an overview of the code and its capabilities. For a deeper dive, check out the [Tweet_Classification.py](https://github.com/optimak/NLP-Project/blob/main/Tweet_Sentiment_Classification.ipynb) code, where you’ll find more details in the comments and variable names.
+This README gives you an overview of the code and its capabilities. The original code can be found [here](https://drive.google.com/file/d/1en5J_872O4hb4iGydoHP7nb-lBXp_R2J/view?usp=sharing)
+For a shortened version, check out the [Tweet_Classification.py](https://github.com/optimak/NLP-Project/blob/main/Tweet_Classification.py) code, where you’ll find more details in the comments and variable names.
